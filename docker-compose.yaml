@@ -16,8 +16,11 @@ services:
     environment:
       - REDIS_ENDPOINT=redis:6379
       - REDIS_PASSWORD=superSecret
+      - PORT=3000
     depends_on:
       - redis
+    ports:
+      - "3000:3000"
     networks:
       - data_sharing
 
